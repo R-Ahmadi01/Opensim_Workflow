@@ -1,20 +1,21 @@
 # Opensim_Workflow
 
-# OpenSim MocoInverse Cycling (J1 / J2) + Muscle Fiber Forces + Knee Joint Reaction
+# OpenSim MocoInverse Cycling (J1 / J2 / J3) + Muscle Fiber Forces + Knee Joint Reaction
 
-This repo contains Python scripts to run **OpenSim MocoInverse** on cycling trials (two schemes: **J1** and **J2**), then export useful outputs like **knee joint reaction forces (JRF)** and **muscle fiber-force / multipliers**.
+It contains Python scripts to run **OpenSim MocoInverse** for cycling studies (By considering three different criterias: **J1**, **J2** and **J3**), then export useful outputs like **knee joint reaction forces (JRF)** and **muscle fiber-force / multipliers**.
 
 ---
 
 ## What’s included
 
 ### Main workflows
-- **Run MocoInverse for multiple participants (J1, J2, or both)** :contentReference[oaicite:0]{index=0}  
-- **Run fiber-force/multiplier exports for multiple participants (J1, J2, or both)** :contentReference[oaicite:1]{index=1}  
+- **Run MocoInverse for multiple participants (J1, J2, J3 or all of them)** :contentReference[oaicite:0]{index=0}  
+- **Run fiber-force/multiplier exports for multiple participants (J1, J2,  J3 or all of them)** :contentReference[oaicite:1]{index=1}  
 
 ### Single-participant solvers
 - **J1 solver** (excitation-effort goal weight only) :contentReference[oaicite:2]{index=2}  
 - **J2 solver** (adds a knee joint reaction goal on `walker_knee_r`) :contentReference[oaicite:3]{index=3}  
+- **J3 solver** (adding EMG signals of few muscles) :contentReference[oaicite:3]{index=3}  
 
 ### Post-processing utilities
 - **Export muscle fiber forces + multipliers from a MocoInverse solution** :contentReference[oaicite:4]{index=4}  
@@ -27,7 +28,7 @@ Common constants/helpers (muscle list, tendon flags, coordinate actuators, CSV u
 ## Requirements
 
 - Python 3.x
-- **OpenSim 4.x Python bindings with Moco enabled** (must be importable as `import opensim as osim`) :contentReference[oaicite:7]{index=7}
+- **OpenSim 4.x Python bindings with Moco enabled**
 
 ---
 
@@ -47,6 +48,6 @@ See the solver scripts for the exact filenames they load and write.
 
 ## Quick start
 
-### 1) Run MocoInverse for everyone (J1 then J2)
+### 1) Run MocoInverse for everyone
 ```bash
 python run_moco_inverse_cycling.py --scheme both
