@@ -1,8 +1,8 @@
 # Opensim_Workflow
 
-# OpenSim MocoInverse Cycling (J1 / J2 / J3) + Muscle Fiber Forces + Knee Joint Reaction
+# OpenSim MocoInverse Cycling with three different costfunctions (J1 / J2 / J3) to get Muscle Fiber Forces and Knee Joint Reaction
 
-It contains Python scripts to run **OpenSim MocoInverse** for cycling studies (By considering three different criterias: **J1**, **J2** and **J3**), then export useful outputs like **knee joint reaction forces (JRF)** and **muscle fiber-force / multipliers**.
+It contains Python scripts to run **OpenSim MocoInverse** for cycling studies (By considering three different criteria: **J1**, **J2**, and **J3**), then export useful outputs like **knee joint reaction forces (JRF)** and **muscle fiber-force / multipliers**.
 
 ---
 
