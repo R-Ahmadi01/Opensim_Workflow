@@ -103,7 +103,7 @@ def solve_moco_inverse_cycling_j2(
     # --- Inverse settings ---
     inverse.setKinematics(osim.TableProcessor(kinematics_file))
     inverse.set_kinematics_allow_extra_columns(True)
-    inverse.set_kinematics_throw_if_missing_columns(False)
+    #inverse.set_kinematics_throw_if_missing_columns(False)
     inverse.set_kinematics_lowpass_cutoff_frequency(6)
     inverse.set_initial_time(float(t_initial))
     inverse.set_final_time(float(t_final))
